@@ -1,1 +1,9 @@
 exportPattern("^[[:alpha:]]+")
+
+#' @import assertthat
+#' @import colorspace
+#' @import ggplot2 (>= 2.2.0)
+#' @import graphics
+#' @import grid
+#' @import methods
+#' @import scales

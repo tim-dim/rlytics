@@ -1,12 +1,11 @@
 Package: rlytics
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Collection of usful functions and colour palettes
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Tim Eck <tim.eck@web.de>
+Maintainer: Tim Eck <tim.eck@web.de>
+Description: Colour palette in OC&C Style for ggplot2
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports:
@@ -17,3 +16,4 @@ Imports:
     grid,
     methods,
     scales
+RoxygenNote: 6.0.1

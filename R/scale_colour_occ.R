@@ -12,7 +12,7 @@
 #' @family colour
 #' @example inst/examples/ex-occ.R
 occ_pal <- function() {
-  scales::manual_pal(unname(ggthemes_data$occ))
+  manual_pal(unname(ggthemes_data$occ))
 }
 
 #' @rdname occ
