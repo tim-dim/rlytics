@@ -23,7 +23,7 @@ To install the development version from github, use the
 
 ```r
 library("devtools")
-install_github("tim-dim/ggthemes")
+install_github("tim-dim/rlytics")
 ```
 
 
