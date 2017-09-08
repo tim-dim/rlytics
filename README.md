@@ -19,7 +19,7 @@ Provides often used functions and themes for working with R and
 ## Install 
 
 To install the development version from github, use the
-**devtools** package,
+**devtools** package:
 
 ```r
 library("devtools")
