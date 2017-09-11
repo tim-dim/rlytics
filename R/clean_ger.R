@@ -22,3 +22,5 @@ clean_ger <- function (x) {
   x = gsub("âˆ’", "?", x)
   x
 }
+
+
