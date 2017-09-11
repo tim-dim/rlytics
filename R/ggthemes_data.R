@@ -8,14 +8,15 @@ ggthemes_data <- {
   ## x to hold value of list as I create it
   x <- list()
 
-  x$occ <-    c(akzent2 = "#99BAD9",
+  x$occ <-    c(    akzent1 = "#CCDDEC",
+                    akzent2 = "#99BAD9",
                     akzent3 = "#669DC5",
                     akzent4 = "#3375B2",
                     akzent5 = "#FF9933",
                     akzent6 = "#C0C0C0",
                     hell2 = "#00539F",
-                    dunktel2 = "#002C54",
-                    akzent1 = "#CCDDEC")
+                    dunktel2 = "#002C54"
+                    )
 
   x$colorblind <- c(black = "#000000",
                     orange = "#E69F00",
