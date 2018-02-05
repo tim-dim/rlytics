@@ -25,3 +25,6 @@ An 8-color occ safe qualitative discrete palette.
 \references{
 Umrechnung OCC-Farbschema in Hex-Werte.pptx
 }
+\seealso{
+Other colour: \code{\link{eyp_pal}}
+}
