@@ -27,11 +27,6 @@ ggname <- function (prefix, grob) {
 
 globalVariables("ggthemes_data")
 
-# assembles a ey-p style filename
-propperFilename <- function(name = "test", project="51103", path="", kuerzel="JSA", fileType = "xlsx") {
-  date = format(Sys.Date(),"%y%m%d")
-  paste(paste(project, date, kuerzel, sep="-"), " ", name, ".", fileType, sep="")
-}
 
 # cleans out umlaute
 clean_umlaute <- function (x) {
