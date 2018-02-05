@@ -1,6 +1,6 @@
 
 
-#' Calculate distance besteen geo coded locations in kilometre
+#' Distance in km. Input: data.frames with the column fr$lat, fr$lon, to$lat, to$lon
 #'
 #'
 #' @rdname calc_dist

@@ -3,14 +3,14 @@
 \name{as_radians}
 \alias{as_radians}
 \alias{calc_dist}
-\title{Calculate distance besteen geo coded locations in kilometre}
+\title{Distance in km. Input: data.frames with the column fr$lat, fr$lon, to$lat, to$lon}
 \usage{
 as_radians(theta = 0)
 
 calc_dist(fr, to)
 }
 \description{
-Calculate distance besteen geo coded locations in kilometre
+Distance in km. Input: data.frames with the column fr$lat, fr$lon, to$lat, to$lon
 }
 \references{
 Calculate distance in km
