@@ -37,6 +37,6 @@ library("rlytics")
 ggplot(mpg, aes(displ, hwy, colour = class)) +
   geom_point() +
   theme_classic() +
-  scale_colour_occ() 
+  scale_colour_eyp() 
 ```
 
