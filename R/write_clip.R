@@ -12,7 +12,7 @@
 #' @export
 #' @rdname write.clip
 write.clip <- function (x) {
-  write.table(x, "clipboard", sep="\t", row.names=FALSE)
+  write.table(x, "clipboard", sep="\t", dec = ",", row.names=FALSE)
 }
 
 
