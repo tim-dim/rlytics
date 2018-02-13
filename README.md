@@ -13,8 +13,8 @@ Provides often used functions and themes for working with R and
 
 ### Scales
 
-- ``scale_colour_occ``: color and shape palettes in OC&C colours.
-- ``scale_colour_colorblind``: Colorblind safe palette from <http://jfly.iam.u-tokyo.ac.jp/color/>.
+- ``scale_color_eyp``: color and shape palettes in EY-Parthenon colors.
+- ``scale_color_colorblind``: Colorblind safe palette from <http://jfly.iam.u-tokyo.ac.jp/color/>.
 
 ## Install 
 
@@ -37,6 +37,6 @@ library("rlytics")
 ggplot(mpg, aes(displ, hwy, colour = class)) +
   geom_point() +
   theme_classic() +
-  scale_colour_occ() 
+  scale_color_eyp() 
 ```
 
