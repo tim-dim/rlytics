@@ -13,32 +13,35 @@
 
 #' @export
 #' @rdname crawl_google_places
+#'
+relevant_types = c("store" = "home_goods_store",
+                   "store" = "clothing_store",
+                   "store" = "department_store",
+                   "store" = "furniture_store",
+                   "store" = "shoe_store",
+                   "store" = "hardware_store",
+                   "store" = "jewelry_store",
+                   "store" = "electronics_store",
+                   "store" = "convenience_store",
+                   "store" = "pet_store",
+                   "store" = "book_store",
+                   "store" = "grocery_or_supermarket",
+                   "health" = "pharmacy",
+                   "food" = "bakery",
+                   "food" = "restaurant",
+                   "food" = "cafe",
+                   "food" = "bar",
+                   "finance" = "bank",
+                   "finance" = "atm",
+                   "transport" = "parking",
+                   "transport" = "subway_station",
+                   "transport" = "bus_station",
+                   "transport" = "train_station",
+                   "transport" = "transit_station")
+
 crawl_google_places <- function(store_locations, radius=500, api_key) {
 
-  relevant_types = c("store" = "home_goods_store",
-                     "store" = "clothing_store",
-                     "store" = "department_store",
-                     "store" = "furniture_store",
-                     "store" = "shoe_store",
-                     "store" = "hardware_store",
-                     "store" = "jewelry_store",
-                     "store" = "electronics_store",
-                     "store" = "convenience_store",
-                     "store" = "pet_store",
-                     "store" = "book_store",
-                     "store" = "grocery_or_supermarket",
-                     "health" = "pharmacy",
-                     "food" = "bakery",
-                     "food" = "restaurant",
-                     "food" = "cafe",
-                     "food" = "bar",
-                     "finance" = "bank",
-                     "finance" = "atm",
-                     "transport" = "parking",
-                     "transport" = "subway_station",
-                     "transport" = "bus_station",
-                     "transport" = "train_station",
-                     "transport" = "transit_station")
+
 
   store_location_sorroundings = data.table()
   pb <- txtProgressBar(min = 1, max = nrow(store_locations), style = 3)
