@@ -16,34 +16,35 @@
 #'
 #'
 
-pkg.env <- new.env()
 
-pkg.env$relevant_types <- c("store" = "home_goods_store",
-                   "store" = "clothing_store",
-                   "store" = "department_store",
-                   "store" = "furniture_store",
-                   "store" = "shoe_store",
-                   "store" = "hardware_store",
-                   "store" = "jewelry_store",
-                   "store" = "electronics_store",
-                   "store" = "convenience_store",
-                   "store" = "pet_store",
-                   "store" = "book_store",
-                   "store" = "grocery_or_supermarket",
-                   "health" = "pharmacy",
-                   "food" = "bakery",
-                   "food" = "restaurant",
-                   "food" = "cafe",
-                   "food" = "bar",
-                   "finance" = "bank",
-                   "finance" = "atm",
-                   "transport" = "parking",
-                   "transport" = "subway_station",
-                   "transport" = "bus_station",
-                   "transport" = "train_station",
-                   "transport" = "transit_station")
+crawl_google_places <- local({
 
-crawl_google_places <- function(store_locations, radius=500, api_key) {
+  relevant_types <- c("store" = "home_goods_store",
+                      "store" = "clothing_store",
+                      "store" = "department_store",
+                      "store" = "furniture_store",
+                      "store" = "shoe_store",
+                      "store" = "hardware_store",
+                      "store" = "jewelry_store",
+                      "store" = "electronics_store",
+                      "store" = "convenience_store",
+                      "store" = "pet_store",
+                      "store" = "book_store",
+                      "store" = "grocery_or_supermarket",
+                      "health" = "pharmacy",
+                      "food" = "bakery",
+                      "food" = "restaurant",
+                      "food" = "cafe",
+                      "food" = "bar",
+                      "finance" = "bank",
+                      "finance" = "atm",
+                      "transport" = "parking",
+                      "transport" = "subway_station",
+                      "transport" = "bus_station",
+                      "transport" = "train_station",
+                      "transport" = "transit_station")
+
+  function(store_locations, radius=500, api_key) {
 
 
 
@@ -58,7 +59,7 @@ crawl_google_places <- function(store_locations, radius=500, api_key) {
 
 
     results = data.table()
-    for (j in 1:length(pkg.env$relevant_types)){
+    for (j in 1:length(relevant_types)){
 
       # wait short time
       Sys.sleep(runif(1, 0.68, 1.25))
@@ -76,7 +77,7 @@ crawl_google_places <- function(store_locations, radius=500, api_key) {
               #"&rankby=",
               #"distance",
               "&type=",
-              pkg.env$relevant_types[j],
+              relevant_types[j],
               "&key=",
               api_key,
               sep=""
@@ -159,4 +160,4 @@ crawl_google_places <- function(store_locations, radius=500, api_key) {
   return(store_location_sorroundings)
 }
 
-
+})
