@@ -17,6 +17,9 @@ as_radians = function(theta=0){
 
 #' @export
 #' @rdname calc_dist
+#' @param fr dataframe of origin location(s), needs following columns: lat, lon
+#' @param to dataframe of destination location(s), needs following columns: lat, lon
+
 calc_dist = function(fr, to) {
   lat1 = as_radians(fr$lat)
   lon1 = as_radians(fr$lon)

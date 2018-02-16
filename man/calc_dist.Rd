@@ -9,6 +9,11 @@ as_radians(theta = 0)
 
 calc_dist(fr, to)
 }
+\arguments{
+\item{fr}{dataframe of origin location(s), needs following columns: lat, lon}
+
+\item{to}{dataframe of destination location(s), needs following columns: lat, lon}
+}
 \description{
 Distance in km. Input: data.frames with the column fr$lat, fr$lon, to$lat, to$lon
 }
