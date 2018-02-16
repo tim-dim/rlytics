@@ -58,7 +58,7 @@ crawl_google_places <- function(store_locations, radius=500, api_key) {
 
 
     results = data.table()
-    for (j in 1:length(relevant_types)){
+    for (j in 1:length(pkg.env$relevant_types)){
 
       # wait short time
       Sys.sleep(runif(1, 0.68, 1.25))
@@ -76,7 +76,7 @@ crawl_google_places <- function(store_locations, radius=500, api_key) {
               #"&rankby=",
               #"distance",
               "&type=",
-              relevant_types[j],
+              pkg.env$relevant_types[j],
               "&key=",
               api_key,
               sep=""
