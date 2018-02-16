@@ -14,7 +14,11 @@
 #' @export
 #' @rdname crawl_google_places
 #'
-relevant_types = c("store" = "home_goods_store",
+#'
+
+pkg.env <- new.env()
+
+pkg.env$relevant_types <- c("store" = "home_goods_store",
                    "store" = "clothing_store",
                    "store" = "department_store",
                    "store" = "furniture_store",
