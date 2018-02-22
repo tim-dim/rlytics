@@ -5,7 +5,7 @@
 \title{Crawl google places for location types}
 \usage{
 crawl_google_places(store_locations, radius = 500, api_key, index = 1,
-  relevant_types = relevant_types)
+  relevant_types)
 }
 \arguments{
 \item{store_locations}{store-dataframe for which you crawl locations, with following structure: store_id, lat, lon}

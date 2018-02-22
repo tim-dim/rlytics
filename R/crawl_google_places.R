@@ -22,7 +22,7 @@
 crawl_google_places <-
 
 
-  function(store_locations, radius=500, api_key, index = 1, relevant_types=relevant_types) {
+  function(store_locations, radius=500, api_key, index = 1, relevant_types) {
 
 
 
