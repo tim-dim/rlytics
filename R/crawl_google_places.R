@@ -10,6 +10,7 @@
 #' @param radius radius of the crawl in meters, default = 500m
 #' @param api_key your google places api key
 #' @param index your starting row for the crawl
+#' @param relevant_types location types you are looking for
 
 
 #' @export
@@ -21,7 +22,7 @@
 crawl_google_places <-
 
 
-  function(store_locations, radius=500, api_key, index = 1) {
+  function(store_locations, radius=500, api_key, index = 1, relevant_types=relevant_types) {
 
 
 
