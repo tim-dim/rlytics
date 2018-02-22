@@ -4,7 +4,7 @@
 \alias{crawl_google_places}
 \title{Crawl google places for location types}
 \usage{
-crawl_google_places(store_locations, radius = 500, api_key)
+crawl_google_places(store_locations, radius = 500, api_key, index = 1)
 }
 \arguments{
 \item{store_locations}{store-dataframe for which you crawl locations, with following structure: store_id, lat, lon}
@@ -12,6 +12,8 @@ crawl_google_places(store_locations, radius = 500, api_key)
 \item{radius}{radius of the crawl in meters, default = 500m}
 
 \item{api_key}{your google places api key}
+
+\item{index}{your starting row for the crawl}
 }
 \description{
 Crawl google places for location types

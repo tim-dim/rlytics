@@ -9,6 +9,7 @@
 #' @param store_locations store-dataframe for which you crawl locations, with following structure: store_id, lat, lon
 #' @param radius radius of the crawl in meters, default = 500m
 #' @param api_key your google places api key
+#' @param index your starting row for the crawl
 
 
 #' @export
@@ -44,14 +45,14 @@ crawl_google_places <- local({
                       "transport" = "train_station",
                       "transport" = "transit_station")
 
-  function(store_locations, radius=500, api_key) {
+  function(store_locations, radius=500, api_key, index = 1) {
 
 
 
   store_location_sorroundings = data.table()
-  pb <- txtProgressBar(min = 1, max = nrow(store_locations), style = 3)
+  pb <- txtProgressBar(min = index, max = nrow(store_locations), style = 3)
 
-  for (i in 1:nrow(store_locations)){
+  for (i in index:nrow(store_locations)){
 
     # update progress bar
     setTxtProgressBar(pb, i)
@@ -59,7 +60,7 @@ crawl_google_places <- local({
 
 
     results = data.table()
-    for (j in 1:length(relevant_types)){
+    for (j in index:length(relevant_types)){
 
       # wait short time
       Sys.sleep(runif(1, 0.68, 1.25))
