@@ -25,6 +25,11 @@ ggname <- function (prefix, grob) {
   grob
 }
 
+style_path <- system.file("extdata", "eyp_styles.xlsx", package = "rlytics")
+xltabr::set_style_path(style_path)
+num_path <- system.file("extdata", "eyp_style_to_excel_number_format.csv", package = "rlytics")
+xltabr::set_cell_format_path(num_path)
+
 globalVariables("ggthemes_data")
 
 

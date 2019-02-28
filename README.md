@@ -7,6 +7,7 @@ Provides often used functions and themes for working with R and
 
 ### Functions
 
+- ``write.clip()``: copies values in table format (excel) to clipboard, dec = ","
 - ``calc_dist``: calculates distance between geocoded locations
 - ``as_numeric_ger``: changes german number format to english number format
 - ``clean_ger``: changes special german characters to normal characters
